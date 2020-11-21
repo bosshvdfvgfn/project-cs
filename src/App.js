@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
 
 import Login from './components/login';
 import auth from './firebase';
@@ -38,6 +39,13 @@ function App() {
   };
   return (
     <div className="App">
+      <Navbar />
+      {/* <nav className="navbar">
+          <ul class="menu">
+            <li class="regis"><a href="./Booking.js">การจอง</a></li>
+            <li class="regis"><a href="./Booking.js">สมัคร</a></li>
+          </ul>
+        </nav> */}
       {
         session.isLoggedIn ? (<header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -56,7 +64,11 @@ function App() {
         </header>) : (<Login setSession={setSession} />)
       }
       <title>ระบบจองห้องเรียนภาควิชาวิทยาการคอมพิวเตอร์มหาวิทยาลัยเกษตรศาสตร์</title>
-      <h1 stype="color: green">Login ด้วยรหัส account </h1>
+      <p>Login เพื่อจองห้อง</p>
+      <div className="footer">
+        <footer><a href="https://www.facebook.com/comsci.ku/">facebook fanpage</a></footer>
+
+      </div>
     </div>
   );
 }

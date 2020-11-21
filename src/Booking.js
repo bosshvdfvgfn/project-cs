@@ -1,12 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-function Booking() {
+export default function booking() {
     return (
         <div>
-            <title>Booking.......</title>
-            <h1>booking process
+           <h1>Hello world</h1>
         </div>
-    );
-}
 
-export default Booking;
+    )
+}
